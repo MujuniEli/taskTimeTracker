@@ -10,8 +10,9 @@ function App() {
   return (
             <div className="app">
                 <Nav />
-                <TrackingCodeSelector />
                 <StartStopBtns />
+                <TrackingCodeSelector />
+                
             </div>
   )
 }

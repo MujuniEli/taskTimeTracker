@@ -64,4 +64,18 @@ export default function Counter() {
         //Toggle the timer status
         setIsRunning((prevIsRunning) => !prevIsRunning);
     };
+
+    return (
+        <div className="counter">
+            <h3>Counter</h3>
+            <p>
+                This counter has been running for {formatNumber(days)} days, {" "}
+                {formatNumber(hours)} hours, {formatNumber(minutes)} minutes and {" "}
+                {formatNumber(seconds)} seconds.
+            </p>
+            <button onClick={handleClick}>
+                {isRunning ? "Stop" : "Start"} the counter
+            </button>
+        </div>
+    );
 }
