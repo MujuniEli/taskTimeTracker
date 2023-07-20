@@ -43,4 +43,25 @@ export default function Counter() {
         });
         
     };
+
+    // deploying useEffect to start or stop the timer based on status
+    useEffect(() => {
+        let timer;
+        if (isRunning) {
+            // if the timer is running, set an interval to call the increment function every second
+            timer = setInterval(incrementCounter, 1000);
+        }else {
+            //if the timer is stopped, clear the interval
+            clearInterval(timer)
+        }
+        //clean up function to clear the interval when the component unmounts
+        return () => clearInterval(timer);
+
+    }, [isRunning]); //useEffect dependency array to run the effect only when the status changes
+
+    //function to handle the click event on the button
+    const handleClick = () => {
+        //Toggle the timer status
+        setIsRunning((prevIsRunning) => !prevIsRunning);
+    };
 }
