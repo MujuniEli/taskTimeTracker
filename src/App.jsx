@@ -1,9 +1,8 @@
 
 import Nav from './components/Nav'
-import './App.css'
 import TrackingCodeSelector from './components/TaskCodeSelector'
-import StartStopBtns from './components/StartStopBtns'
 import Counter from './components/Counter'
+import './App.css'
 
 function App() {
   
@@ -11,7 +10,6 @@ function App() {
   return (
             <div className="app">
                 <Nav />
-                <StartStopBtns />
                 <TrackingCodeSelector />
                 <Counter />
                 
