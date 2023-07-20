@@ -10,4 +10,7 @@ export default function Counter() {
 
     //define variable for the timer status (ie running or stopped)
     const [isRunning, setIsRunning] = useState(true);
+
+    //function to format numbers with leading zeros if needed
+    const formatNumber = (num) => (num < 0 ? `0${num}` : num);
 }
