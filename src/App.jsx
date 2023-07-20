@@ -2,6 +2,7 @@
 import Nav from './components/Nav'
 import './App.css'
 import TrackingCodeSelector from './components/TaskCodeSelector'
+import StartStopBtns from './components/StartStopBtns'
 
 function App() {
   
@@ -10,7 +11,7 @@ function App() {
             <div className="app">
                 <Nav />
                 <TrackingCodeSelector />
-            
+                <StartStopBtns />
             </div>
   )
 }
