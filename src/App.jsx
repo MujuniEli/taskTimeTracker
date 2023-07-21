@@ -2,6 +2,7 @@
 import Nav from './components/Nav'
 import TrackingCodeSelector from './components/TaskCodeSelector'
 import Counter from './components/Counter'
+import History from './components/History'
 import './App.css'
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
                 <Nav />
                 <TrackingCodeSelector />
                 <Counter />
+                <History />
                 
             </div>
   )
