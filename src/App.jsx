@@ -17,9 +17,9 @@ function App() {
             <div className="app">
                 <Nav />
                 <Routes>
-                    <Route path='' element={<Admin/>} />
-                    <Route path='' element={<SignIn />} />
-                    <Route path='' element={<SignUp />} />
+                    <Route path='/admin' element={<Admin/>} />
+                    <Route path='/signIn' element={<SignIn />} />
+                    <Route path='/signUp' element={<SignUp />} />
                 </Routes>
                 <TrackingCodeSelector />
                 <Counter />
