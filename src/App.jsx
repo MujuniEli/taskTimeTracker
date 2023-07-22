@@ -15,7 +15,7 @@ function App() {
             <div className="app">
                 <Nav />
                 <Routes>
-                    <Route path='/tracker' element={ <Tracker /> } />
+                    <Route path='/' element={ <Tracker /> } />
                     <Route path='/admin' element={ <Admin /> } />
                     <Route path='/signIn' element={ <SignIn /> } />
                     <Route path='/signUp' element={ <SignUp /> } />
