@@ -1,12 +1,13 @@
-import TrackingCodeSelector from './components/TaskCodeSelector'
-import Counter from './components/Counter'
-import History from './components/History'
+
+import TaskCodeSelector from '../components/TaskCodeSelector'
+import Counter from '../components/Counter'
+import History from '../components/History'
 
 export default function Tracker () {
 
     return (
                 <div className="tracker">
-                    <TrackingCodeSelector />
+                    <TaskCodeSelector />
                     <Counter />
                     <History />
                 </div>

@@ -1,6 +1,7 @@
 
 import { Routes, Route } from 'react-router-dom'
 
+import Tracker from './pages/Tracker'
 import Admin from './pages/Admin'
 import SignIn from './pages/SignIn'
 import SignUp from './pages/SignUp'
@@ -14,6 +15,7 @@ function App() {
             <div className="app">
                 <Nav />
                 <Routes>
+                    <Route path='/tracker' element={ <Tracker /> } />
                     <Route path='/admin' element={ <Admin /> } />
                     <Route path='/signIn' element={ <SignIn /> } />
                     <Route path='/signUp' element={ <SignUp /> } />
