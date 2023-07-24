@@ -9,7 +9,7 @@ export default function SignIn () {
     })
     
     return (
-                <div className="admin">
+                <div className="signIn">
                     <h3>Sign in to access the tracker</h3>
                     <label htmlFor="email"></label>
                     <input
