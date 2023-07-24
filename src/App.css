@@ -1,7 +1,19 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Lugrasimo&family=Raleway:ital,wght@0,200;0,400;1,100&display=swap');
 
-* {
+:root {
+        /* colors */
+        --clr-dark: #191F3F;
+        --clr-light: #BCBCCC;
+        --clr-white: #F3F3FB;
+        --clr-drk1: #84849C;
+        --clr-drk2: #8B8C9C;
+        --clr-drk3: #A5A7B3;
+}
+
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
