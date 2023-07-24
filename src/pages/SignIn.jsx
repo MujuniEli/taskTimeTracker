@@ -4,12 +4,13 @@ export default function SignIn () {
     const formik = useFormik({
         initialValues: {
             email:"",
+            password:""
         },
     })
     
     return (
                 <div className="admin">
-                    <h3>This is the sign in panel</h3>
+                    <h3>Sign in to access the tracker</h3>
                     <label htmlFor="email"></label>
                     <input
                         value={formik.values.email}
@@ -17,6 +18,15 @@ export default function SignIn () {
                         type='email'
                         placeholder='Email' 
                     />
+                    <label htmlFor="password"></label>
+                    <input
+                        value={formik.values.password}
+                        id='password' 
+                        type='password'
+                        placeholder='password' 
+                    />
+
+                    <button type='submit'>Sign In</button>
                 </div>
     )
 }
