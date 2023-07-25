@@ -46,9 +46,10 @@ export default function SignUp () {
                         placeholder="Confirm Password"
                         onChange={handleChange}
                         onBlur={handleBlur}
+                        className={errors.confirmPassword && touched.confirmPassword ? "input-error" : ""}
                         />
 
-                        <button type="submit">
+                        <button disabled={isSubmitting} type="submit">
                             Submit
                         </button>
                     </form>

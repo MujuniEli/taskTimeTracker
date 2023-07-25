@@ -29,6 +29,9 @@ export default function SignIn () {
 
                     <button type='submit'>Sign In</button>
                     </form>
+                    {/* <div className="sideImg">
+                    <img src="https://source.unsplash.com/random/800x600" alt="Random image from unsplash" />
+                    </div> */}
                 </div>
     )
 }
