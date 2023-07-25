@@ -1,6 +1,14 @@
 import { useFormik } from "formik"
 
 export default function SignUp () {
+
+    const {values} = useFormik({
+            initialValues: {
+                email: "",
+                password: "",
+                confirmPassword: ""
+            },
+    })
     
     return (
                 <div className="signUp">
@@ -8,17 +16,20 @@ export default function SignUp () {
 
                     <form action="">
                         <input
+                        value={values.email}
                         id="email" 
                         type="email" 
                         placeholder="email"
                         />
                         <input 
+                        value={values.password}
                         id="password"
                         type="password"
                         placeholder="Create password" 
                         />
 
                         <input
+                        value={values.confirmPassword}
                         id="confirmPassword" 
                         type="password" 
                         placeholder="Confirm Password"
