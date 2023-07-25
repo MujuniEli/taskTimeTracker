@@ -2,7 +2,7 @@ import { useFormik } from "formik"
 
 export default function SignUp () {
 
-    const {values} = useFormik({
+    const {values, handleBlur, handleChange} = useFormik({
             initialValues: {
                 email: "",
                 password: "",
@@ -20,12 +20,16 @@ export default function SignUp () {
                         id="email" 
                         type="email" 
                         placeholder="email"
+                        onChange={handleChange}
+                        onBlur={handleBlur}
                         />
                         <input 
                         value={values.password}
                         id="password"
                         type="password"
                         placeholder="Create password" 
+                        onChange={handleChange}
+                        onBlur={handleBlur}
                         />
 
                         <input
@@ -33,6 +37,8 @@ export default function SignUp () {
                         id="confirmPassword" 
                         type="password" 
                         placeholder="Confirm Password"
+                        onChange={handleChange}
+                        onBlur={handleBlur}
                         />
 
                         <button type="submit">
