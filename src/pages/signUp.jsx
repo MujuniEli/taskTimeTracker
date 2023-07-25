@@ -1,20 +1,27 @@
 import { useFormik } from "formik"
+import { myFormSchema } from "../Schemas"
 
 export default function SignUp () {
 
-    const {values, handleBlur, handleChange} = useFormik({
+    const onSubmit = async (values, actions) => {
+        await new Promise((resolve) => setTimeout(resolve, 1000));
+        actions.resetForm();
+    };
+
+    const {values, errors, touched, isSubmitting, handleBlur, handleChange, handleSubmit} = useFormik({
             initialValues: {
                 email: "",
                 password: "",
                 confirmPassword: ""
             },
-    })
+            validationSchema: myFormSchema, onSubmit,
+    });
     
     return (
                 <div className="signUp">
                     <h3>This is the sign up panel</h3>
 
-                    <form action="">
+                    <form onSubmit={handleSubmit} autoComplete="off">
                         <input
                         value={values.email}
                         id="email" 
