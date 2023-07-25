@@ -34,6 +34,10 @@ export default function SignUp () {
                         type="password" 
                         placeholder="Confirm Password"
                         />
+
+                        <button type="submit">
+                            Submit
+                        </button>
                     </form>
                 </div>
     )

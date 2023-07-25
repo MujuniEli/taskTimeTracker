@@ -11,6 +11,7 @@ export default function SignIn () {
     return (
                 <div className="signIn">
                     <h3>Sign in to access the tracker</h3>
+                    <form action="">
                     <label htmlFor="email"></label>
                     <input
                         value={formik.values.email}
@@ -27,6 +28,7 @@ export default function SignIn () {
                     />
 
                     <button type='submit'>Sign In</button>
+                    </form>
                 </div>
     )
 }
