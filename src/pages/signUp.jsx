@@ -48,6 +48,7 @@ export default function SignUp () {
                         onBlur={handleBlur}
                         className={errors.confirmPassword && touched.confirmPassword ? "input-error" : ""}
                         />
+                        {errors.confirmPassword && touched.confirmPassword && (<p className="error">{errors.confirmPassword}</p>)}
 
                         <button disabled={isSubmitting} type="submit">
                             Submit
