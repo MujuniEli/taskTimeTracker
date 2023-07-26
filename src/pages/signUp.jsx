@@ -29,6 +29,7 @@ export default function SignUp () {
                         placeholder="email"
                         onChange={handleChange}
                         onBlur={handleBlur}
+                        className={errors.email && touched.email ? "input-error" : ""}
                         />
                         <input 
                         value={values.password}
