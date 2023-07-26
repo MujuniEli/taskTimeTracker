@@ -31,6 +31,7 @@ export default function SignUp () {
                         onBlur={handleBlur}
                         className={errors.email && touched.email ? "input-error" : ""}
                         />
+                        {errors.email && touched.email && <p className="error">{errors.email}</p>}
                         <input 
                         value={values.password}
                         id="password"
@@ -40,7 +41,7 @@ export default function SignUp () {
                         onBlur={handleBlur}
                         className={errors.password && touched.password ? "input-error" : ""}
                         />
-
+                        {errors.password && touched.password && <p className="error">{errors.password}</p>}
                         <input
                         value={values.confirmPassword}
                         id="confirmPassword" 
