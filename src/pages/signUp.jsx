@@ -38,6 +38,7 @@ export default function SignUp () {
                         placeholder="Create password" 
                         onChange={handleChange}
                         onBlur={handleBlur}
+                        className={errors.password && touched.password ? "input-error" : ""}
                         />
 
                         <input
