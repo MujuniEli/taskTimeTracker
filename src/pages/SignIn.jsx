@@ -8,7 +8,7 @@ export default function SignIn () {
             actions.resetForm();
     }
 
-    const {values, errors, touched, isSubmitting, handleBlur, handleChange} = useFormik({
+    const {values, errors, touched, isSubmitting, handleBlur, handleChange, handleSubmit} = useFormik({
         initialValues: {
             email:"",
             password:""
@@ -18,9 +18,10 @@ export default function SignIn () {
     
     return (
                 <div className="signIn">
+                    <section className='form-section'>
                     <h3>Sign in to access the tracker</h3>
-                    <form action="">
-                    <label htmlFor="email"></label>
+                    <form onSubmit={handleSubmit}>
+                    <div className="input">
                     <input
                         value={values.email}
                         id='email' 
@@ -31,7 +32,8 @@ export default function SignIn () {
                         className={errors.email && touched.email ? "input-error" : ""}
                     />
                     {errors.email && touched.email && <p className='error'>{errors.email}</p>}
-                    <label htmlFor="password"></label>
+                    </div>
+                    <div className="input">
                     <input
                         value={values.password}
                         id='password' 
@@ -42,13 +44,15 @@ export default function SignIn () {
                         className={errors.password && touched.password ? "input-error" : ""}
                     />
                     {errors.password && touched.password && <p className='error'>{errors.password}</p>}
+                    </div>
 
                     <button disabled={isSubmitting} type='submit'>Sign In</button>
                     </form>
                     <p>Forgot your password?</p>
-                    <div className="sideImg">
+                    </section>
+                    <section className="sideImg">
                     <img src="https://source.unsplash.com/random/800x600" alt="Random image from unsplash" />
-                    </div>
+                    </section>
                 </div>
     )
 }

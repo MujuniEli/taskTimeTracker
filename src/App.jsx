@@ -17,8 +17,8 @@ function App() {
                 <Routes>
                     <Route path='/' element={ <Tracker /> } />
                     <Route path='/admin' element={ <Admin /> } />
-                    <Route path='/signIn' element={ <SignIn /> } />
-                    <Route path='/signUp' element={ <SignUp /> } />
+                    <Route path='/signin' element={ <SignIn /> } />
+                    <Route path='/signup' element={ <SignUp /> } />
                 </Routes>
             </div>
   )

@@ -37,3 +37,25 @@ body {
         font-family: 'Raleway', sans-serif;
         background-color: var(--clr-white);
 }
+
+/* make images easier to work with */
+img {
+        max-width: 100%;
+        display: block;
+}
+
+/* make inputs easier to work with */
+input,
+button,
+select {
+        font: inherit;
+}
+
+/* nav styles */
+nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+}
+
+/* form styles */
