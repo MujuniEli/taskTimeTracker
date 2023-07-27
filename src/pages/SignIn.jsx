@@ -45,6 +45,7 @@ export default function SignIn () {
 
                     <button disabled={isSubmitting} type='submit'>Sign In</button>
                     </form>
+                    <p>Forgot your password?</p>
                     <div className="sideImg">
                     <img src="https://source.unsplash.com/random/800x600" alt="Random image from unsplash" />
                     </div>
