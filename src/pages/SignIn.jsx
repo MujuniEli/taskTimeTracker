@@ -1,11 +1,19 @@
 import { useFormik } from 'formik'
+import { myFormSchema } from '../Schemas'
 
 export default function SignIn () {
+
+    const onSubmit = async (values, actions) => {
+            await new Promise ((resolve) => setTimeout(resolve, 1000));
+            actions.resetForm();
+    }
+
     const formik = useFormik({
         initialValues: {
             email:"",
             password:""
         },
+        validationSchema: myFormSchema, onSubmit,
     })
     
     return (
