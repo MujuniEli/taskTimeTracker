@@ -59,3 +59,31 @@ nav {
 }
 
 /* form styles */
+.signIn {
+        display: flex;
+}
+
+.form-section {
+        width: 50%;
+        margin-block: auto;
+        margin-left: 2rem;
+}
+
+.error {
+        color: #fc8181;
+        font-size: 0.75rem;
+        text-align: left;
+        margin-top: 0.25rem;
+}
+
+input,
+select {
+        width: 75%;
+        padding: 0.65rem 0.5rem;
+        font-size: 1rem;
+        margin: 1rem 0 0.2rem;
+        color: var(--clr-dark);
+        border: 2px solid var(--clr-light);
+        border-radius: 10px;
+        outline: none;
+}
