@@ -8,7 +8,7 @@ export default function SignIn () {
             actions.resetForm();
     }
 
-    const formik = useFormik({
+    const {values, errors, touched, isSubmitting, handleBlur, handleChange} = useFormik({
         initialValues: {
             email:"",
             password:""
@@ -22,20 +22,28 @@ export default function SignIn () {
                     <form action="">
                     <label htmlFor="email"></label>
                     <input
-                        value={formik.values.email}
+                        value={values.email}
                         id='email' 
                         type='email'
-                        placeholder='Email' 
+                        placeholder='Email'
+                        onChange={handleChange}
+                        onBlur={handleBlur} 
+                        className={errors.email && touched.email ? "input-error" : ""}
                     />
+                    {errors.email && touched.email && <p className='error'>{errors.email}</p>}
                     <label htmlFor="password"></label>
                     <input
-                        value={formik.values.password}
+                        value={values.password}
                         id='password' 
                         type='password'
                         placeholder='password' 
+                        onChange={handleChange}
+                        onBlur={handleBlur} 
+                        className={errors.password && touched.password ? "input-error" : ""}
                     />
+                    {errors.password && touched.password && <p className='error'>{errors.password}</p>}
 
-                    <button type='submit'>Sign In</button>
+                    <button disabled={isSubmitting} type='submit'>Sign In</button>
                     </form>
                     <div className="sideImg">
                     <img src="https://source.unsplash.com/random/800x600" alt="Random image from unsplash" />
