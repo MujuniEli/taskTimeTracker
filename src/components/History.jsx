@@ -12,7 +12,7 @@ export default function History () {
                             </div>
                             <br />
                             <div className="label-name">
-                            <p >END DATE:</p>
+                            <p>END DATE:</p>
                             <input type="text" />
                             </div>
                         </form>

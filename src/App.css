@@ -125,3 +125,11 @@ select {
         align-items: center;
 }
 
+/* button styles */
+.counter-btn {
+        background-color: var(--clr-drk3);
+        height: 55%;
+        width: 10%;
+        border: none;
+        border-radius: 5px;
+}
