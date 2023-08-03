@@ -71,19 +71,19 @@ export default function Counter() {
             <div className="counter">
             <p>
                 <div className="days">
-                Days {formatNumber(days)}  {" "}
+                   <h4>Days</h4>  {formatNumber(days)}  {" "}
                 </div>
 
                 <div className="hours">
-                Hours {formatNumber(hours)} 
+                    <h4>Hours </h4> {formatNumber(hours)} 
                 </div>
                 
                 <div className="minutes">
-                 Minutes   {formatNumber(minutes)} {" "}
+                    <h4>Minutes</h4>    {formatNumber(minutes)} {" "}
                 </div>
                 
                 <div className="seconds">
-                 Seconds   {formatNumber(seconds)} 
+                    <h4>Seconds</h4>    {formatNumber(seconds)} 
                 </div>
                 
             </p>
