@@ -66,16 +66,27 @@ export default function Counter() {
     };
 
     return (
-        <div className="counter">
+        <div className="counter-section">
             <h3>Counter</h3>
+            <div className="counter">
             <p>
+                <div className="days">
                 This counter has been running for {formatNumber(days)} days, {" "}
+                </div>
+                
+                <div className="minutes">
                 {formatNumber(hours)} hours, {formatNumber(minutes)} minutes and {" "}
+                </div>
+                
+                <div className="seconds">
                 {formatNumber(seconds)} seconds.
+                </div>
+                
             </p>
             <button onClick={handleClick}>
                 {isRunning ? "Stop" : "Start"} the counter
             </button>
+            </div>
         </div>
     );
 }
