@@ -71,15 +71,19 @@ export default function Counter() {
             <div className="counter">
             <p>
                 <div className="days">
-                This counter has been running for {formatNumber(days)} days, {" "}
+                Days {formatNumber(days)}  {" "}
+                </div>
+
+                <div className="hours">
+                Hours {formatNumber(hours)} 
                 </div>
                 
                 <div className="minutes">
-                {formatNumber(hours)} hours, {formatNumber(minutes)} minutes and {" "}
+                 Minutes   {formatNumber(minutes)} {" "}
                 </div>
                 
                 <div className="seconds">
-                {formatNumber(seconds)} seconds.
+                 Seconds   {formatNumber(seconds)} 
                 </div>
                 
             </p>
