@@ -5,12 +5,16 @@ export default function History () {
                     <div className="filter">
                         <h3>Filter here to see your tracking history</h3>
                         <div className="filter-inputs">
-                        <form action="">
-                            <label htmlFor="">START DATE</label>
+                        <form action="" className="form">
+                            <div className="label-name">
+                            <p> START DATE: </p>
                             <input type="text" />
+                            </div>
                             <br />
-                            <label htmlFor="">END DATE</label>
+                            <div className="label-name">
+                            <p >END DATE:</p>
                             <input type="text" />
+                            </div>
                         </form>
 
                         <button> SEARCH </button>

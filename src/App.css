@@ -38,6 +38,8 @@ h1, h2, h3 {
 body {
         font-family: 'Raleway', sans-serif;
         background-color: var(--clr-white);
+        width: 90%;
+        margin: auto;
 }
 
 /* make images easier to work with */
@@ -93,12 +95,12 @@ select {
 /* timer display styles */
 .counter {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
 }
 
 .timer {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
 }
 
 .timer-numbers {
@@ -110,4 +112,16 @@ select {
 
 .filter-inputs {
         display: flex;
+        justify-content: space-around;
 }
+
+.form {
+        display: flex;
+        justify-content: space-around;
+}
+
+.label-name {
+        display: flex;
+        align-items: center;
+}
+

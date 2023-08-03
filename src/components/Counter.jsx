@@ -87,8 +87,8 @@ export default function Counter() {
                 </div>
                 
             </p>
-            <button onClick={handleClick}>
-                {isRunning ? "Stop" : "Start"} the counter
+            <button className="counter-btn" onClick={handleClick}>
+                {isRunning ? "Stop" : "Start"} 
             </button>
             </div>
         </div>
