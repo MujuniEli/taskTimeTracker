@@ -89,3 +89,19 @@ select {
         border-radius: 10px;
         outline: none;
 }
+
+/* timer display styles */
+.counter {
+        display: flex;
+        justify-content: space-between;
+}
+
+.timer {
+        display: flex;
+        justify-content: space-between;
+}
+
+.timer-numbers {
+        margin: 2rem;
+        text-align: center;
+}

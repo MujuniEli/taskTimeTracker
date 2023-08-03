@@ -69,20 +69,20 @@ export default function Counter() {
         <div className="counter-section">
             <h3>Counter</h3>
             <div className="counter">
-            <p>
-                <div className="days">
+            <p className="timer">
+                <div className="days timer-numbers">
                    <h4>Days</h4>  {formatNumber(days)}  {" "}
                 </div>
 
-                <div className="hours">
+                <div className="hours timer-numbers">
                     <h4>Hours </h4> {formatNumber(hours)} 
                 </div>
                 
-                <div className="minutes">
+                <div className="minutes timer-numbers">
                     <h4>Minutes</h4>    {formatNumber(minutes)} {" "}
                 </div>
                 
-                <div className="seconds">
+                <div className="seconds timer-numbers">
                     <h4>Seconds</h4>    {formatNumber(seconds)} 
                 </div>
                 
