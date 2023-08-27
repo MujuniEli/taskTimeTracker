@@ -51,7 +51,7 @@ export default function SignIn () {
                     <p>Forgot your password?</p>
                     </section>
                     <section className="sideImg">
-                    <img src="https://source.unsplash.com/random/800x600" alt="Random image from unsplash" />
+                    <img src="https://source.unsplash.com/random/" alt="Random image from unsplash" />
                     </section>
                 </div>
     )
