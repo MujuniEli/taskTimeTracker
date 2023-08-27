@@ -96,6 +96,7 @@ select {
 .counter {
         display: flex;
         justify-content: space-around;
+        align-items: center;
 }
 
 .timer {
@@ -132,4 +133,5 @@ select {
         width: 10%;
         border: none;
         border-radius: 5px;
+        padding: 0.5rem;
 }
