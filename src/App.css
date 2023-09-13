@@ -38,7 +38,7 @@ h1, h2, h3 {
 body {
         font-family: 'Raleway', sans-serif;
         background-color: var(--clr-white);
-        width: 90%;
+        width: 100%;
         margin: auto;
 }
 
@@ -85,6 +85,11 @@ nav {
         font-size: 0.75rem;
         text-align: left;
         margin-top: 0.25rem;
+}
+
+.signUp {
+        width: 80%;
+        margin: 0 auto;
 }
 
 input,
