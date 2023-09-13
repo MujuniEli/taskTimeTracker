@@ -45,7 +45,6 @@ export default function SignIn () {
                     />
                     {errors.password && touched.password && <p className='error'>{errors.password}</p>}
                     </div>
-
                     <button disabled={isSubmitting} type='submit'>Sign In</button>
                     </form>
                     <p>Forgot your password?</p>

@@ -66,6 +66,7 @@ export default function SignUp () {
                         />
                         {errors.confirmPassword && touched.confirmPassword && (<p className="error">{errors.confirmPassword}</p>)}
 
+                            <br />
                         <button disabled={isSubmitting} type="submit">
                             Submit
                         </button>
