@@ -42,6 +42,11 @@ body {
         margin: auto;
 }
 
+.tracker {
+        width: 95%;
+        margin: auto;
+}
+
 /* make images easier to work with */
 img {
         max-width: 100%;
