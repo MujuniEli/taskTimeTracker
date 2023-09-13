@@ -8,12 +8,12 @@ export default function History () {
                         <form action="" className="form">
                             <div className="label-name">
                             <p> START DATE: </p>
-                            <input type="text" />
+                            <input type="date" />
                             </div>
                             <br />
                             <div className="label-name">
                             <p>END DATE:</p>
-                            <input type="text" />
+                            <input type="date" />
                             </div>
                         </form>
 
