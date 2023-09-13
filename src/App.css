@@ -147,3 +147,10 @@ select {
         border-radius: 5px;
         padding: 0.5rem;
 }
+
+.counter-btn:hover {
+        background-color: var(--clr-drk2);
+        cursor: pointer;
+        font-weight: bolder;
+        border: 1px solid white;
+}
