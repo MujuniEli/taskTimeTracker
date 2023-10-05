@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useQuery } from "react"
 
 async function fetchTaskInfo(taskCode, userName, userId, startDate, endDate) {
     const response = await fetch(
@@ -9,15 +9,17 @@ async function fetchTaskInfo(taskCode, userName, userId, startDate, endDate) {
 } 
 
 export default function History ({ taskCode, userName, userId, startDate, endDate }) {
-    const [taskInfo, setTaskInfo] = useState(null)
+    const { data: taskInfo, isLoading, error } = useQuery(
+            ["task-info", taskCode, userName, userId, startDate, endDate],
+            () => fetchTaskInfo(taskCode, userName, userId, startDate, endDate)
+    );
 
-    useEffect(() => {
-        fetchTaskInfo(taskCode, userName, userId, startDate, endDate)
-        .then((taskInfo) => {setTaskInfo(taskInfo)})
-    }, [taskCode, userName, userId, startDate, endDate]);
-
-    if (taskInfo === null) {
+    if (isLoading) {
         return <div>Loading task info...</div>
+    }
+
+    if(error) {
+        return <div>Error fetching task info: {error.message}</div>
     }
 
     return (
@@ -40,6 +42,30 @@ export default function History ({ taskCode, userName, userId, startDate, endDat
                         <button> SEARCH </button>
                         </div>
                     </div>
+
+                    <div>
+                        <h1>Task Information</h1>
+                        <table>
+                            <thead>
+                            <tr>
+                                <th>Task Code</th>
+                                <th>User Name</th>
+                                <th>User ID</th>
+                                <th>Start Date</th>
+                                <th>End Date</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>{taskInfo.taskCode}</td>
+                                <td>{taskInfo.userName}</td>
+                                <td>{taskInfo.userId}</td>
+                                <td>{taskInfo.startDate}</td>
+                                <td>{taskInfo.endDate}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        </div>
                 </div>
     )
 }
