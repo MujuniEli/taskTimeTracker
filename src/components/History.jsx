@@ -1,3 +1,12 @@
+import { useEffect, useState } from "react"
+
+async function fetchTaskInfo(taskCode, userName, userId, startDate, endDate) {
+    const response = await fetch(
+        `/api/tasks/${taskCode}/${userName}/${userId}/${startDate}/${endDate}`
+        );
+        const taskInfo = await response.json();
+        return taskInfo;
+} 
 
 export default function History () {
     return (
