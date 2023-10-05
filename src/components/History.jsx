@@ -8,7 +8,18 @@ async function fetchTaskInfo(taskCode, userName, userId, startDate, endDate) {
         return taskInfo;
 } 
 
-export default function History () {
+export default function History ({ taskCode, userName, userId, startDate, endDate }) {
+    const [taskInfo, setTaskInfo] = useState(null)
+
+    useEffect(() => {
+        fetchTaskInfo(taskCode, userName, userId, startDate, endDate)
+        .then((taskInfo) => {setTaskInfo(taskInfo)})
+    }, [taskCode, userName, userId, startDate, endDate]);
+
+    if (taskInfo === null) {
+        return <div>Loading task info...</div>
+    }
+
     return (
                 <div>
                     <div className="filter">
